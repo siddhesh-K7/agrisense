@@ -1,0 +1,22 @@
+{
+  "model_name": "AgriSense XGBoost Demand Forecaster",
+  "version": "1.0.0",
+  "training_records": 40000,
+  "test_records": 10000,
+  "split_strategy": "Chronological (80% Train, 20% Test)",
+  "evaluation": {
+    "MAE": 7.7593,
+    "RMSE": 10.2365,
+    "R2": 0.6425,
+    "MAPE": "6.84%"
+  },
+  "hyperparameters": {
+    "n_estimators": 150,
+    "max_depth": 6,
+    "learning_rate": 0.08,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3,
+    "random_state": 42
+  }
+}

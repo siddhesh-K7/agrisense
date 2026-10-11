@@ -1,0 +1,16 @@
+{
+  "algorithm": "Stacked LSTM Neural Network",
+  "time_step": 60,
+  "target_variable": "Modal_Price",
+  "price_unit": "INR per Quintal (Rs./Qtl)",
+  "commodity": "Onion",
+  "state": "Maharashtra",
+  "scaling": "MinMaxScaler(0, 1)",
+  "input_shape": [
+    60,
+    1
+  ],
+  "output_shape": [
+    1
+  ]
+}

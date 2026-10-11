@@ -1,0 +1,48 @@
+{
+  "model_name": "AgriSense Multi-Commodity Universal LSTM Forecaster",
+  "version": "1.0.0",
+  "dataset": "AGMARKNET 10-Year Mandi Price Dataset (2016-2026)",
+  "commodity": "Onion",
+  "state": "Maharashtra",
+  "market_count": 225,
+  "total_daily_sequences": 3624,
+  "test_sequences": 724,
+  "evaluation": {
+    "normalized_mae": 0.0465,
+    "normalized_rmse": 0.0752,
+    "r2_score": 0.8912,
+    "time_step": 60,
+    "training_sequences": 12000,
+    "validation_sequences": 3000
+  },
+  "architecture": [
+    {
+      "layer": "LSTM",
+      "units": 50,
+      "return_sequences": true
+    },
+    {
+      "layer": "Dropout",
+      "rate": 0.2
+    },
+    {
+      "layer": "LSTM",
+      "units": 50,
+      "return_sequences": false
+    },
+    {
+      "layer": "Dropout",
+      "rate": 0.2
+    },
+    {
+      "layer": "Dense",
+      "units": 25
+    },
+    {
+      "layer": "Dense",
+      "units": 1
+    }
+  ],
+  "supported_commodities_count": 357,
+  "supported_states_count": 31
+}
